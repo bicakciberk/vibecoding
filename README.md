@@ -11,8 +11,6 @@ _A blockchain-powered platform for transparent ocean cleanup funding and marine 
 [![Stacks](https://img.shields.io/badge/Built%20on-Stacks-5546FF.svg)](https://stacks.co)
 [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/your-username/clean-oceans-initiative)
 
-[Live Demo](https://clean-oceans-initiative.vercel.app) • [Documentation](./docs) • [Report Bug](https://github.com/your-username/clean-oceans-initiative/issues)
-
 </div>
 
 ---
