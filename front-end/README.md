@@ -2,23 +2,38 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+1) Create environment file
+
+Copy `env.example` to `.env` and set values:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cp env.example .env
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Required vars:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+NEXT_PUBLIC_STACKS_NETWORK=devnet # or testnet/mainnet
+NEXT_PUBLIC_PLATFORM_HIRO_API_KEY=your-api-key
+NEXT_PUBLIC_CONTRACT_DEPLOYER_DEVNET_ADDRESS=
+NEXT_PUBLIC_CONTRACT_DEPLOYER_TESTNET_ADDRESS=
+NEXT_PUBLIC_CONTRACT_DEPLOYER_MAINNET_ADDRESS=
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2) Install and run the development server:
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser.
+
+## Notes on Contract Deployment
+
+- The app reads the contract at `<DEPLOYER_ADDRESS>.fundraising` based on `NEXT_PUBLIC_STACKS_NETWORK`.
+- To be contract owner, deploy the `fundraising` contract from your wallet address for that network.
+- After deployment, initialize the campaign from the admin panel in the UI.
 
 ## Learn More
 
@@ -31,6 +46,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+When deploying, set the same env variables in your Vercel project.

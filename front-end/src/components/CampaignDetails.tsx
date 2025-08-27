@@ -353,6 +353,17 @@ export default function CampaignDetails({
                         Unable to retrieve campaign data from the blockchain.
                         This could be due to network issues or the campaign may
                         no longer exist.
+                        <Box mt="2">
+                          <Box fontSize="sm">
+                            Contract: {FUNDRAISING_CONTRACT.address}
+                            .{FUNDRAISING_CONTRACT.name} on {getStacksNetworkString()}
+                          </Box>
+                          {campaignFetchError ? (
+                            <Box fontSize="sm" color="gray.600">
+                              Error: {String((campaignFetchError as Error)?.message || campaignFetchError)}
+                            </Box>
+                          ) : null}
+                        </Box>
                       </AlertDescription>
                     </Box>
                   </Alert>

@@ -1,0 +1,19 @@
+---
+id: 0
+name: Initialize Wildlife Conservation Campaign
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-call:
+            contract-id: ST2JHG361ZXG51QTKY2NQCVBPPRRE2KZB1HR05NNC.fundraising
+            expected-sender: ST2JHG361ZXG51QTKY2NQCVBPPRRE2KZB1HR05NNC
+            method: initialize-campaign
+            parameters:
+              - u50000  # $50,000 funding goal
+              - u0      # 0 = use default duration (30 days)
+            cost: 10000
+      epoch: "3.0" 
