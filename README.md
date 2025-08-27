@@ -6,7 +6,7 @@
 
 _A blockchain-powered platform for transparent ocean cleanup funding and marine conservation_
 
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/bicakciberk/vibecodin)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/bicakciberk/vibecoding)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Stacks](https://img.shields.io/badge/Built%20on-Stacks-5546FF.svg)](https://stacks.co)
 [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/bicakciberk/vibecoding)
